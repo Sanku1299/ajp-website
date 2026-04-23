@@ -7,6 +7,15 @@
     <title>Brand Boosters Marketing | Ignite Your Growth</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
 </head>
 <body>
     <header class="navbar">
@@ -22,22 +31,32 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="container">
-                <h1 class="fade-in">Ignite Your Brand's Growth</h1>
-                <p class="fade-in delay-1">Data-driven marketing that scales your business and maximizes ROI.</p>
-                <div class="hero-cta fade-in delay-2">
-                    <a href="#contact" class="btn-primary large">Start Scaling Today</a>
+        <section id="hero" class="hero scroll-reveal">
+            <canvas id="ballpit-canvas"></canvas>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="fade-in">Ignite Your Brand's Growth</h1>
+                    <p class="fade-in delay-1 typing-container">We specialize in <span class="typing-text"></span><span class="cursor">|</span></p>
+                    <div class="hero-cta fade-in delay-2">
+                        <a href="#contact" class="btn-primary large pulse-anim">Start Scaling Today</a>
+                    </div>
+                </div>
+                <div class="hero-illustration float-anim">
+                    <img src="assets/rocket.png" alt="Growth Rocket" />
                 </div>
             </div>
-            <div class="glow-orb orb-1"></div>
-            <div class="glow-orb orb-2"></div>
+            <!-- Remove static orbs, the ballpit replaces them -->
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="services">
+        <section id="services" class="services scroll-reveal slide-up">
             <div class="container">
-                <h2 class="section-title text-center">Our Core Services</h2>
+                <div class="section-header">
+                    <h2 class="section-title text-center">Our Core Services</h2>
+                    <div class="services-illustration float-anim delay-1">
+                        <img src="assets/megaphone.png" alt="Marketing Megaphone" />
+                    </div>
+                </div>
                 <div class="services-grid">
                     <div class="service-card border-glow-card">
                         <span class="edge-light"></span>
@@ -76,9 +95,12 @@
         </section>
 
         <!-- Results / ROI Section -->
-        <section id="results" class="results">
+        <section id="results" class="results scroll-reveal slide-up">
             <div class="container">
                 <div class="results-content">
+                    <div class="results-illustration float-anim delay-2">
+                        <img src="assets/target.png" alt="Target Goal" />
+                    </div>
                     <h2 class="section-title">Proven ROI. Measurable Growth.</h2>
                     <p>We don't just generate traffic; we generate revenue. Our strategies are built on data and relentless optimization.</p>
                     <div class="metrics">
@@ -100,7 +122,7 @@
         </section>
 
         <!-- Lead Capture Section -->
-        <section id="contact" class="contact">
+        <section id="contact" class="contact scroll-reveal slide-up">
             <div class="container">
                 <div class="contact-card">
                     <h2 class="section-title">Ready to Boost Your Brand?</h2>
@@ -157,5 +179,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script type="module" src="ballpit.js"></script>
 </body>
 </html>
