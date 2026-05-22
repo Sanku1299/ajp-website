@@ -9,7 +9,7 @@ export function AboutSection() {
       <div className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-[1.25fr_.75fr]">
         <article className="panel relative min-h-[360px] overflow-hidden p-7 sm:p-8">
           <img
-            className="absolute bottom-0 right-0 h-full w-[58%] object-cover object-center opacity-90 max-md:opacity-35"
+            className="absolute bottom-0 right-0 h-full object-cover object-center opacity-90 max-md:opacity-35"
             src={mascotClose}
             alt="AJP ant mascot wearing sunglasses and a hoodie"
           />

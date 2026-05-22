@@ -7,9 +7,9 @@ export function MemesSection() {
   return (
     <section id="memes" className="px-5 py-4 sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-[210px_1fr]">
-        <aside className="panel p-6">
+        <aside>
           <p className="section-kicker">Memes &gt; Movement</p>
-          <h2 className="font-display text-5xl uppercase leading-[.92] text-bone">
+          <h2 className="font-display text-3xl uppercase leading-[.92] text-bone">
             Laugh. Share.
             <span className="block text-rust">Aware.</span>
           </h2>
