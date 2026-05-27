@@ -6,7 +6,7 @@ export function Button({ children, variant = 'solid', className = '', icon: Icon
     const styles =
         variant === 'solid'
             ? 'border-rust bg-rust text-white hover:bg-ember'
-            : 'border-white/70 bg-white/5 text-white hover:border-rust hover:text-rust';
+            : 'border-rust/70 bg-white/5 text-rust hover:border-white hover:text-white';
 
     return (
         <button className={`${base} ${styles} ${className}`} type="button">
