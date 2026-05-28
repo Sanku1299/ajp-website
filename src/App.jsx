@@ -1,4 +1,5 @@
 import React from 'react';
+import { Toaster } from 'sonner';
 import {
   Header,
   Hero,
@@ -13,6 +14,7 @@ import {
 export default function App() {
   return (
     <main className="min-h-screen overflow-hidden bg-coal text-white">
+      <Toaster theme="dark" position="bottom-right" />
       <Header />
       <Hero />
       <PrincipleStrip />
