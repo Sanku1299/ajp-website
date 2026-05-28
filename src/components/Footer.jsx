@@ -1,11 +1,52 @@
-import React from 'react';
-import { Flag, Instagram, Twitter, Youtube, MessageCircle, Mail, Radio } from 'lucide-react';
+import React, { useState } from 'react';
+import { Flag, Mail } from 'lucide-react';
+import { toast } from 'sonner';
 import { Button } from './Button';
+import followBg from '../assets/follow-bg5.png';
+import instaIcon from '../assets/insta.png';
+import twitterIcon from '../assets/twitter.png';
+import redditIcon from '../assets/reddit.png';
+
+const socialLinks = [
+  { name: 'Instagram', src: instaIcon, label: '@antijantaparty' },
+  { name: 'X', src: twitterIcon, label: '@AntiJantaParty' },
+  { name: 'Reddit', src: redditIcon, label: 'r/AntiJantaParty' },
+];
 
 export function Footer() {
+  const [email, setEmail] = useState('');
+
+  const validateEmail = (emailValue) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(emailValue);
+  };
+
+  const handleSubscribe = () => {
+    if (!email.trim()) {
+      toast.error('Please enter email');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      toast.error('Please enter a valid email');
+      return;
+    }
+
+    toast.success('Subscribe successfully!');
+    setEmail('');
+  };
+
   return (
     <footer id="join-us" className="border-t border-rust/35 bg-[#050c14] px-5 sm:px-8 lg:px-10">
-      <div className="mx-auto grid max-w-7xl gap-8 py-8 md:grid-cols-[1fr_1fr_.8fr] md:items-center">
+      <div
+        className="mx-auto grid max-w-7xl gap-8 py-8 md:grid-cols-[1fr_1fr_.8fr] md:items-center overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgb(5,12,20) 0%, rgba(5,12,20,0) 30%, rgba(5,12,20,0) 80%, rgb(5,12,20) 100%), url(${followBg})`,
+          backgroundPosition: 'right center',
+          backgroundSize: 'auto 100%',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <div>
           <h2 className="font-display text-5xl uppercase leading-[.92] text-bone">
             Tu Hai Na,
@@ -31,27 +72,36 @@ export function Footer() {
                 name="email"
                 placeholder="Enter your email"
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleSubscribe()}
               />
             </div>
-            <Button className="px-4">Subscribe</Button>
+            <Button className="px-4" onClick={handleSubscribe}>
+              Subscribe
+            </Button>
           </div>
         </form>
 
-        <div className="relative min-h-28 overflow-hidden md:text-right">
-          <p className="font-display text-xl uppercase text-rust">Follow Us</p>
-          <div className="mt-4 flex gap-4 md:justify-end">
-            {[Instagram, Twitter, Youtube, MessageCircle].map((Icon, index) => (
-              <a
-                className="grid h-9 w-9 place-items-center border border-white/15 bg-white/5 text-white transition hover:border-rust hover:text-rust"
-                href="#join-us"
-                key={index}
-                aria-label="Social profile"
-              >
-                <Icon className="h-4 w-4" aria-hidden="true" />
-              </a>
-            ))}
+        <div
+          className="relative min-h-[220px] overflow-hidden rounded-3xl bg-no-repeat md:text-right"
+        >
+          <div className="relative z-10 flex h-full flex-col justify-center px-5  md:px-6">
+            <p className="font-display text-2xl uppercase text-rust">Follow Us</p>
+            <div className="mt-6 flex flex-col gap-5 md:items-end">
+              {socialLinks.map(({ name, src, label }) => (
+                <a
+                  className="flex items-center gap-4 text-white transition hover:text-rust"
+                  href="#join-us"
+                  key={name}
+                  aria-label={`Follow on ${name}`}
+                >
+                  <img src={src} alt={name} className="h-14 w-14 object-contain" />
+                  <span className="text-base font-medium md:text-right">{label}</span>
+                </a>
+              ))}
+            </div>
           </div>
-          <Radio className="absolute -bottom-16 right-0 h-44 w-44 text-white/[.04]" strokeWidth={1.2} />
         </div>
       </div>
       <div className="mx-auto flex max-w-7xl flex-col gap-2 border-t border-white/10 py-3 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import ManifestoSection from './components/ManifestoSection';
 import { X, Terminal } from 'lucide-react';
+import { Toaster } from 'sonner';
 
 export default function App() {
   const [trailerOpen, setTrailerOpen] = useState(false);
@@ -30,6 +31,9 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-[#020617] text-white flex flex-col justify-start">
+      {/* Toast notifications from remote main branch integration */}
+      <Toaster theme="dark" position="bottom-right" />
+
       {/* Cinematic Film-Grain Noise Overlay */}
       <div className="gritty-overlay"></div>
 
