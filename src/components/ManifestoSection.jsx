@@ -47,7 +47,7 @@ export default function ManifestoSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-orange/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
       <div className="w-full mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-white/10 min-h-[360px]">
+        <div className="grid grid-cols-1 md:grid-cols-[1.25fr_1fr_1fr_1fr_1fr] divide-y md:divide-y-0 md:divide-x divide-white/10 min-h-[360px]">
           
           {/* Column 1: Manifesto Intro */}
           <div className="p-5 md:p-6 flex flex-col justify-between bg-brand-navy-main/20">
