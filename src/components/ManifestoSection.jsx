@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Brain, Wifi, Ban } from 'lucide-react';
+import { Brain, Wifi, Pointer } from 'lucide-react';
 
 export default function ManifestoSection() {
   const cards = [
@@ -35,7 +35,7 @@ export default function ManifestoSection() {
       mission: "MISSION 04",
       title: "NO MORE FAKE PROMISES",
       description: "Jumle nahi, results chahiye!",
-      icon: Ban,
+      icon: Pointer,
       theme: "dark",
       glowColor: "rgba(255, 85, 0, 0.15)",
     },
