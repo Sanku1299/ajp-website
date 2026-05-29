@@ -13,7 +13,7 @@ import {
 
 export default function App() {
   return (
-    <main className="min-h-screen overflow-hidden bg-coal text-white">
+    <main className="min-h-screen bg-coal text-white">
       <Toaster theme="dark" position="bottom-right" />
       <Header />
       <Hero />
