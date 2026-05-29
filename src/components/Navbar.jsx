@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ShieldAlert } from 'lucide-react';
-import antHead from '../assets/ant_head.png';
+import logoMascot from '../assets/logo-mascot.png';
 
 export default function Navbar({ onJoinClick, onManifestoClick }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -27,11 +27,11 @@ export default function Navbar({ onJoinClick, onManifestoClick }) {
         >
           <div className="relative">
             <img 
-              src={antHead} 
+              src={logoMascot} 
               alt="AJP Logo" 
-              className="w-10 h-10 object-cover rounded-full border border-brand-orange shadow-[0_0_10px_rgba(255,85,0,0.5)] group-hover:shadow-[0_0_18px_rgba(255,85,0,0.85)] transition-all duration-300"
+              className="w-10 h-10 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)]"
             />
-            <div className="absolute inset-0 rounded-full bg-brand-orange/10 animate-ping pointer-events-none"></div>
+            <div className="absolute inset-0 rounded-full bg-brand-orange/5 animate-ping pointer-events-none"></div>
           </div>
           <div className="flex flex-col leading-none">
             <span className="font-heading font-black text-xl tracking-wider text-white group-hover:text-brand-orange transition-colors">AJP</span>

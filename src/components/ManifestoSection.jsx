@@ -47,15 +47,15 @@ export default function ManifestoSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-orange/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
       <div className="w-full mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-white/10 min-h-[650px]">
+        <div className="grid grid-cols-1 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-white/10 min-h-[360px]">
           
           {/* Column 1: Manifesto Intro */}
-          <div className="p-8 md:p-10 flex flex-col justify-between bg-brand-navy-main/20">
+          <div className="p-5 md:p-6 flex flex-col justify-between bg-brand-navy-main/20">
             <div>
-              <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
+              <span className="text-[10px] font-black uppercase tracking-widest text-brand-orange">
                 OUR MANIFESTO
               </span>
-              <h2 className="mt-6 font-heading text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-[0.95] text-white">
+              <h2 className="mt-3 font-heading text-2xl lg:text-3xl font-black uppercase tracking-tighter leading-[0.95] text-white">
                 SACHAI <br />
                 KE <br />
                 SAATH, <br />
@@ -64,8 +64,8 @@ export default function ManifestoSection() {
               </h2>
             </div>
             
-            <div className="mt-8 mb-8">
-              <p className="text-sm font-medium leading-relaxed text-slate-300">
+            <div className="my-3">
+              <p className="text-[11px] lg:text-xs font-medium leading-relaxed text-slate-300">
                 Serious problems. Satirical solutions. Because rona to sabko aata hai, hum hasta hua system change karenge.
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function ManifestoSection() {
               <a 
                 href="#explore"
                 onClick={(e) => e.preventDefault()}
-                className="inline-block w-full py-3 border border-brand-orange/45 text-brand-orange font-heading font-black text-xs text-center uppercase tracking-widest hover:bg-brand-orange hover:text-white transition-all duration-300 cursor-pointer"
+                className="inline-block w-full py-2 border border-brand-orange/45 text-brand-orange font-heading font-black text-[10px] text-center uppercase tracking-widest hover:bg-brand-orange hover:text-white transition-all duration-300 cursor-pointer"
               >
                 EXPLORE MANIFESTO
               </a>
@@ -94,37 +94,37 @@ export default function ManifestoSection() {
                   boxShadow: `inset 0 0 20px ${card.glowColor}`,
                 }}
                 transition={{ duration: 0.2 }}
-                className={`p-8 md:p-10 flex flex-col justify-between items-center transition-all duration-300 ${
+                className={`p-5 md:p-6 flex flex-col justify-between items-center transition-all duration-300 ${
                   isOrange 
                     ? 'bg-brand-orange text-[#020617]' 
                     : 'bg-transparent text-white'
                 }`}
               >
                 {/* Top Label */}
-                <span className={`text-[10px] font-black uppercase tracking-widest ${
+                <span className={`text-[9px] font-black uppercase tracking-widest ${
                   isOrange ? 'text-black/60' : 'text-slate-400'
                 }`}>
                   {card.mission}
                 </span>
 
                 {/* Upper Middle: Title */}
-                <h3 className={`font-heading text-2xl lg:text-3xl font-black uppercase tracking-tight text-center leading-[1.05] max-w-[200px] mt-6 ${
+                <h3 className={`font-heading text-lg lg:text-xl font-black uppercase tracking-tight text-center leading-[1.05] max-w-[200px] mt-3 ${
                   isOrange ? 'text-[#020617]' : 'text-white'
                 }`}>
                   {card.title}
                 </h3>
 
                 {/* Center: Icon */}
-                <div className="my-10 flex items-center justify-center">
+                <div className="my-4 flex items-center justify-center">
                   <Icon 
-                    size={48} 
+                    size={32} 
                     strokeWidth={1.5}
                     className={isOrange ? 'text-[#020617]' : 'text-white'} 
                   />
                 </div>
 
                 {/* Bottom Description */}
-                <p className={`text-xs lg:text-sm font-medium text-center leading-relaxed max-w-[180px] mb-4 ${
+                <p className={`text-[11px] font-medium text-center leading-relaxed max-w-[180px] mb-1 ${
                   isOrange ? 'text-[#020617]/80' : 'text-slate-400'
                 }`}>
                   {card.description}

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Play, Shield } from 'lucide-react';
-import antPodium from '../assets/ant_podium.png';
+import heroRally from '../assets/hero-rally.png';
 
 export default function HeroSection({ onJoinClick, onWatchClick }) {
   // Animation presets
@@ -120,7 +120,7 @@ export default function HeroSection({ onJoinClick, onWatchClick }) {
             className="relative z-10 w-full max-w-[320px] md:max-w-[420px] select-none pointer-events-none"
           >
             <img 
-              src={antPodium} 
+              src={heroRally} 
               alt="Leader Ant Mascot AJP" 
               className="w-full h-auto object-contain filter drop-shadow-[0_0_40px_rgba(255,85,0,0.3)] animate-float-slow"
             />
