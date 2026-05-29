@@ -5,7 +5,7 @@ import { Button } from './Button';
 
 export function AboutSection() {
   return (
-    <section id="about" className="px-5 pt-3 sm:px-8 lg:px-10">
+    <section className="px-5 pt-3 sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-[1.25fr_.75fr]">
         <article className="panel relative min-h-[360px] overflow-hidden p-7 sm:p-8">
           <img

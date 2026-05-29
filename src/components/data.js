@@ -13,7 +13,7 @@ import memeJumle from '../assets/meme-jumle.png';
 import memeResume from '../assets/meme-resume.png';
 import memeWork from '../assets/meme-work.png';
 
-export const navItems = ['Home', 'About', 'Manifesto', 'Missions', 'Memes', 'Merch', 'Join Us'];
+export const navItems = ['Home', 'About', 'Manifesto', 'Memes', 'Join Us'];
 
 export const principles = [
   {

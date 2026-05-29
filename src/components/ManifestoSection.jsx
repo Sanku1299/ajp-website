@@ -5,7 +5,7 @@ import { MissionCard } from './MissionCard';
 
 export function ManifestoSection() {
   return (
-    <section id="manifesto" className="px-5 pt-3 sm:px-8 lg:px-10">
+    <section id="manifesto" className="px-5 py-8 sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-[.9fr_repeat(4,1fr)]">
         <article className="panel p-7">
           <p className="section-kicker">Our Manifesto</p>

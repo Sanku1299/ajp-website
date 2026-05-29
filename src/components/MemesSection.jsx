@@ -5,7 +5,7 @@ import { Button } from './Button';
 
 export function MemesSection() {
   return (
-    <section id="memes" className="px-5 py-4 sm:px-8 lg:px-10">
+    <section className="px-5 py-4 sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-[210px_1fr]">
         <aside>
           <p className="section-kicker">Memes &gt; Movement</p>
